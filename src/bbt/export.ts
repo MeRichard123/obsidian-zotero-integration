@@ -36,6 +36,7 @@ import {
   removeStartingSlash,
   wrapAnnotationTemplate,
 } from './template.helpers';
+import { applyDefaultNoteImportFolder } from './paths';
 
 async function processNote(
   citeKey: CiteKey,
@@ -661,7 +662,7 @@ export async function exportToMarkdown(
   };
 
   const getMarkdownPath = async (pathTemplateData: any) => {
-    return normalizePath(
+    const markdownPath = normalizePath(
       sanitizeFilePath(
         removeStartingSlash(
           await renderTemplate(
@@ -672,6 +673,8 @@ export async function exportToMarkdown(
         )
       )
     );
+
+    return applyDefaultNoteImportFolder(markdownPath, settings.noteImportFolder);
   };
 
   for (let i = 0, len = itemData.length; i < len; i++) {

@@ -25,7 +25,7 @@ import {
   ZoteroConnectorSettings,
 } from './types';
 
-const commandPrefix = 'obsidian-zotero-desktop-connector:';
+const commandPrefix = 'obsidian-zotero-desktop-connector-fork:';
 const citationCommandIDPrefix = 'zdc-';
 const exportCommandIDPrefix = 'zdc-exp-';
 const DEFAULT_SETTINGS: ZoteroConnectorSettings = {
