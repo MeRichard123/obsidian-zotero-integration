@@ -1,4 +1,7 @@
-## Obsidian Zotero Integration
+## Obsidian Zotero Integration (Fork)
+
+- Please see original creators repo
+- My fork fixes an issue with importing notes going to root rather than the specifed folder
 
 Insert and import citations, bibliographies, notes, and PDF annotations from Zotero into Obsidian. Requires the [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/installation/) plugin.
 
